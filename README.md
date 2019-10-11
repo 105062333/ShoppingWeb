@@ -1,4 +1,3 @@
-# Software Studio 2018 Spring Midterm Project
 
 ## Demo
    https://105062333.gitlab.io/Midterm_Project/index.html
