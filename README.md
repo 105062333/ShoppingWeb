@@ -2,43 +2,9 @@
 ## Notice
 * Replace all [xxxx] to your answer
 
-## Topic
-* Shopping website
-* Key functions (add/delete)
-    1. Product page
-    2. shopping pipeline
-    3. user dashboard 
-
-* Other functions (add/delete)
-    1. home page
-    2. about page
-    3. contact page
-    4. footer
-
-## Basic Components
-|Component|Score|Y/N|
-|:-:|:-:|:-:|
-|Membership Mechanism|20%|Y|
-|GitLab Page|5%|Y|
-|Database|15%|Y|
-|RWD|15%|Y|
-|Topic Key Function|15%|Y|
-
-## Advanced Components
-|Component|Score|Y/N|
-|:-:|:-:|:-:|
-|Third-Party Sign In|2.5%|Y|
-|Chrome Notification|5%|Y|
-|Use CSS Animation|2.5%|Y|
-|Security Report|5%|Y|
-|Other functions|1~10%|Y|
 
 ## Website Detail Description
-* 使用到的Template
 
-    <a href="http://sc.chinaz.com/moban/">Template</a> 使用在這網站的一個template參考來當主頁
-
-    <a href="https://colorlib.com/wp/html5-and-css3-login-forms/">Signin</a> Login page 是參考這裡的template
 * 登入畫面
 
     * <img src="public/images/report_signin.png">
