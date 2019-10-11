@@ -1,7 +1,7 @@
 # Software Studio 2018 Spring Midterm Project
-## Notice
-* Replace all [xxxx] to your answer
 
+## Demo
+   https://105062333.gitlab.io/Midterm_Project/index.html
 
 ## Website Detail Description
 
