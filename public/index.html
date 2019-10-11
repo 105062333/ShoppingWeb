@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SHOPPE MALL</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="" />
+	<link rel="Shortcut Icon" href="images/horse.ico">
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- css -->
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="all" />
+	<!--// css -->
+	<!-- font -->
+	<!--<link rel="stylesheet" type="text/css" href="fonts/font.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font2.css">-->
+	<!--<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'
+	 rel='stylesheet' type='text/css'>-->
+	<!-- //font -->
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-storage.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-database.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/notify.js"></script>
+	<script src="js/check.js"></script>
+	<!--<script>
+		var user_email = '';
+		firebase.auth().onAuthStateChanged(function (user) {
+			var menu = document.getElementById('dynamic-menu');
+			// Check user login
+			if (user) {
+				user_email = user.email;
+				menu.innerHTML = "<span class='dropdown-item'>" + user.email + "</span><span class='fa fa-smile-o'>" + "</span><br><span class='dropdown-item' id='logout-btn' >Logout</span>";
+				/// TODO 5: Complete logout button event
+				///         1. Add a listener to logout button 
+				///         2. Show alert when logout success or error (use "then & catch" syntex)
+				var logoutbtn = document.getElementById('logout-btn');
+				var pay = document.getElementById('payment');
+				logoutbtn.addEventListener('click', function () {
+					firebase.auth().signOut().then(() => {
+						alert('byebye~~');
+						window.location.replace('signin.html');
+					}, function (error) {
+
+					});
+				});
+				pay.addEventListener('click', function () {
+					window.location.replace('payment.html');
+				});
+
+			} else {
+				var pay = document.getElementById('payment');
+				// It won't show any post if not login
+				menu.innerHTML = "<a class='dropdown-item' href='signin.html'>Login</a>";
+				//document.getElementById('post_list').innerHTML = "";
+				pay.addEventListener('click', function () {
+					alert('Please Login!!');
+					window.location.replace('signin.html');
+				});
+			}
+		});
+
+	</script>-->
+</head>
+
+<body>
+	<div class="header-top-w3layouts">
+		<div class="container">
+			<div class="col-md-6 logo-w3">
+				<a href="index.html">
+					<img src="images/logo2.png" alt=" " />
+					<h1>SHAPPE
+						<span>CLUB</span>
+					</h1>
+				</a>
+			</div>
+
+			<div class="col-md-6 phone-w3l">
+				<ul>
+					<li>
+						<a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<image id="account" src="images/account.png" style="cursor: pointer;"></image>
+						</a>
+						<div id="dynamic-menu" class="dropdown-menu" aria-labelledby="dropdown01">
+							<a class="dropdown-item" href="signin.html" >Login</a>
+							<br>
+						</div>
+					</li>
+					<li>
+						<span class="fa fa-whatsapp" aria-hidden="true"></span>
+					</li>
+					<li>+886970498229</li>
+				</ul>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="header-bottom-w3ls">
+		<div class="container">
+			<div class="col-md-7 navigation-agileits">
+				<nav class="navbar navbar-default">
+					<div class="navbar-header nav_2">
+						<button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+						<ul class="nav navbar-nav ">
+							<li class=" active">
+								<a href="index.html" class="hyper ">
+									<span>Home</span>
+								</a>
+							</li>
+							<li class="dropdown ">
+								<a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown">
+									<span>Clothing
+										<b class="caret"></b>
+									</span>
+								</a>
+								<ul class="dropdown-menu multi">
+									<div class="row">
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+
+												<li>
+													<a href="sweater.html">
+														<i class="fa fa-hand-o-right" aria-hidden="true"></i><span style="opacity:0">1</span><strong>Sweater</strong></a>
+												</li>
+												<li>
+													<a href="coats.html">
+														<i class="fa fa-hand-o-right" aria-hidden="true"></i><span style="opacity:0">1</span><strong>Coats</strong></a>
+												</li>
+												<li>
+													<a href="jeans.html">
+														<i class="fa fa-hand-o-right" aria-hidden="true"></i><span style="opacity:0">1</span><strong>Jeans</strong></a>
+												</li>
+												<li>
+													<a href="shirt.html">
+														<i class="fa fa-hand-o-right" aria-hidden="true"></i><span style="opacity:0">1</span><strong>T-Shirt</strong></a>
+												</li>
+												<li>
+													<a href="suit.html">
+														<i class="fa fa-hand-o-right" aria-hidden="true"></i><span style="opacity:0">1</span><strong>Suit</strong></a>
+												</li>
+												<li>
+													<a href="jacket.html">
+														<i class="fa fa-hand-o-right" aria-hidden="true"></i><span style="opacity:0">1</span><strong>Jacket</strong></a>
+												</li>
+
+											</ul>
+										</div>
+										<div class="col-sm-6 w3l">
+											<a href="#">
+												<img src="images/menu.gif" class="img-responsive" alt="">
+											</a>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+								</ul>
+							</li>
+
+							<li>
+								<a href="about.html" class="hyper">
+									<span>About</span>
+								</a>
+							</li>
+							<li>
+								<a href="contact.html" class="hyper">
+									<span>Contact</span>
+								</a>
+							</li>
+							<li>
+								<a href="user.html" class="hyper">
+									<span>User</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+
+
+			<script>
+				$(document).ready(function () {
+					$(".dropdown").hover(
+						function () {
+							$('.dropdown-menu', this).stop(true, true).slideDown("fast");
+							$(this).toggleClass('open');
+						},
+						function () {
+							$('.dropdown-menu', this).stop(true, true).slideUp("fast");
+							$(this).toggleClass('open');
+						}
+					);
+				});
+			</script>
+
+			<div class="col-md-4 search-agileinfo">
+				<form action="#" method="post">
+					<input type="search" name="Search" placeholder="Please Searching..." required="">
+					<button type="submit" class="btn btn-default search" aria-label="Left Align">
+						<i class="fa fa-search" aria-hidden="true"> </i>
+					</button>
+				</form>
+			</div>
+			<div class="col-md-1 cart-wthree">
+				<div class="cart">
+					<form action="#" method="post" class="last">
+						<input type="hidden" name="cmd" value="_cart" />
+						<input type="hidden" name="display" value="1" />
+						<button class="w3view-cart" type="submit" name="submit" value="">
+							<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+						</button>
+					</form>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="banner-agile">
+		<div class="container">
+			<h2>WELCOME TO</h2>
+			<h3>Shappe
+				<span>Mall</span>
+			</h3>
+			<p>Suspendisse sed tellus id libero pretium interdum. Suspendisse potenti. Quisque consectetur elit sit amet vehicula tristique.
+			</p>
+			<a href="about.html">Read More</a>
+		</div>
+	</div>
+	<div class="banner-bootom-w3-agileits">
+		<div class="container">
+			<div class="col-md-5 bb-grids bb-left-agileits-w3layouts">
+				<a href="sweater.html">
+					<div class="bb-left-agileits-w3layouts-inner">
+						<h3>SALE</h3>
+						<h4>upto
+							<span>50%</span>
+						</h4>
+					</div>
+				</a>
+			</div>
+			<div class="col-md-4 bb-grids bb-middle-agileits-w3layouts">
+				<a href="jeans.html">
+					<div class="bb-middle-top">
+						<h3>SALE</h3>
+						<h4>upto
+							<span>35%</span>
+						</h4>
+					</div>
+				</a>
+				<a href="shirt.html">
+					<div class="bb-middle-bottom">
+						<h3>SALE</h3>
+						<h4>upto
+							<span>45%</span>
+						</h4>
+					</div>
+				</a>
+			</div>
+			<div class="col-md-3 bb-grids bb-right-agileits-w3layouts">
+				<a href="suit.html">
+					<div class="bb-right-top">
+						<h3>SALE</h3>
+						<h4>upto
+							<span>30%</span>
+						</h4>
+					</div>
+				</a>
+				<a href="coats.html">
+					<div class="bb-right-bottom">
+						<h3>SALE</h3>
+						<h4>upto
+							<span>40%</span>
+						</h4>
+					</div>
+				</a>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="top-products">
+		<div class="container">
+			<h3>2018 Best Seller</h3>
+			<div class="sap_tabs">
+				<div id="horizontalTab">
+					<ul class="resp-tabs-list">
+						<li class="resp-tab-item">
+							<span>Women's</span>
+						</li>
+
+					</ul>
+					<div class="clearfix"> </div>
+					<div class="resp-tabs-container">
+						<div class="tab-1 resp-tab-content">
+							<div class="col-md-4 top-product-grids tp1 animated wow slideInUp" data-wow-delay=".5s">
+								<a href="sweater.html">
+									<div class="product-img">
+										<img src="images/tp1.jpg" width="300" height="300" alt="" class="pro-image-front"/>
+										<img src="images/sw2.jpg" width="300" height="300" alt="" class="pro-image-back"/>
+										<div class="p-mask">
+											<form action="#" method="post">
+												<input type="hidden" name="cmd" value="_cart" />
+												<input type="hidden" name="add" value="1" />
+												<input type="hidden" name="w3ls1_item" value="Hot Sweater" />
+												<input type="hidden" name="amount" value="990.00" />
+												<button type="submit" class="w3ls-cart pw3ls-cart" onclick="product1()">
+													<i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+											</form>
+										</div>
+									</div>
+								</a>
+								<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+								<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+								<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+								<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+								<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+								<h4>Hot Sweater</h4>
+								<h5>$990.00</h5>
+							</div>
+							<div class="col-md-4 top-product-grids tp2">
+								<a href="coats.html">
+									<div class="product-img">
+											<img src="images/co3.jpg" width="300" height="300" alt="" class="pro-image-front"/>
+											<img src="images/co4.jpg" width="300" height="300" alt="" class="pro-image-back"/>
+										<div class="p-mask">
+											<form action="#" method="post">
+												<input type="hidden" name="cmd" value="_cart" />
+												<input type="hidden" name="add" value="1" />
+												<input type="hidden" name="w3ls1_item" value="Hot Coats" />
+												<input type="hidden" name="amount" value="1990.00" />
+												<button type="submit" class="w3ls-cart pw3ls-cart" onclick="product2()">
+													<i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+											</form>
+										</div>
+									</div>
+								</a>
+								<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+								<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+								<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+								<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+								<i class="fa fa-star gray-star" aria-hidden="true"></i>
+								<h4>Hot Coats</h4>
+								<h5>$1990.00</h5>
+							</div>
+							<div class="col-md-4 top-product-grids tp3">
+								<a href="jeans.html">
+									<div class="product-img">
+											<img src="images/tp3.jpg" width="300" height="300" alt="" class="pro-image-front"/>
+											<img src="images/je4.jpg" width="300" height="300" alt="" class="pro-image-back"/>
+										<div class="p-mask">
+											<form action="#" method="post">
+												<input type="hidden" name="cmd" value="_cart" />
+												<input type="hidden" name="add" value="1" />
+												<input type="hidden" name="w3ls1_item" value="Hot Jeans" />
+												<input type="hidden" name="amount" value="1190.00" />
+												<button type="submit" class="w3ls-cart pw3ls-cart" onclick="product3()">
+													<i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+											</form>
+										</div>
+									</div>
+								</a>
+								<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+								<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+								<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+								<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+								<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+								<h4>Hot Jeans</h4>
+								<h5>$1190.00</h5>
+							</div>
+							
+							<div class="clearfix"></div>
+							<div class="top-products-set2">
+								<div class="col-md-4 top-product-grids tp5">
+									<a href="shirt.html">
+										<div class="product-img">
+												<img src="images/tp7.jpg" width="300" height="300" alt="" class="pro-image-front"/>
+												<img src="images/t5.png" width="300" height="300" alt="" class="pro-image-back"/>
+											<div class="p-mask">
+												<form action="#" method="post">
+													<input type="hidden" name="cmd" value="_cart" />
+													<input type="hidden" name="add" value="1" />
+													<input type="hidden" name="w3ls1_item" value="Hot Shirt" />
+													<input type="hidden" name="amount" value="590.00" />
+													<button type="submit" class="w3ls-cart pw3ls-cart" onclick="product14()">
+														<i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+												</form>
+											</div>
+										</div>
+									</a>
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									<h4>Hot Shirt</h4>
+									<h5>$590.00</h5>
+								</div>
+								<div class="col-md-4 top-product-grids tp6">
+									<a href="suit.html">
+										<div class="product-img">
+												<img src="images/tp5.jpg" width="300" height="300" alt="" class="pro-image-front"/>
+												<img src="images/su3.jpg" width="300" height="300" alt="" class="pro-image-back"/>
+											<div class="p-mask">
+												<form action="#" method="post">
+													<input type="hidden" name="cmd" value="_cart" />
+													<input type="hidden" name="add" value="1" />
+													<input type="hidden" name="w3ls1_item" value="Hot Suit" />
+													<input type="hidden" name="amount" value="790.00" />
+													<button type="submit" class="w3ls-cart pw3ls-cart" onclick="product5()">
+														<i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+												</form>
+											</div>
+										</div>
+									</a>
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									<i class="fa fa-star gray-star" aria-hidden="true"></i>
+									<h4>Hot Suit</h4>
+									<h5>$790.00</h5>
+								</div>
+								<div class="col-md-4 top-product-grids tp7">
+									<a href="jacket.html">
+										<div class="product-img">
+												<img src="images/tp6.jpg" width="300" height="300" alt="" class="pro-image-front"/>
+												<img src="images/ja4.jpg" width="300" height="300" alt="" class="pro-image-back"/>
+											<div class="p-mask">
+												<form action="#" method="post">
+													<input type="hidden" name="cmd" value="_cart" />
+													<input type="hidden" name="add" value="1" />
+													<input type="hidden" name="w3ls1_item" value="Hot Jacket" />
+													<input type="hidden" name="amount" value="1390.00" />
+													<button type="submit" class="w3ls-cart pw3ls-cart" onclick="product6()">
+														<i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+												</form>
+											</div>
+										</div>
+									</a>
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									<i class="fa fa-star yellow-star" aria-hidden="true"></i>
+									<i class="fa fa-star gray-star" aria-hidden="true"></i>
+									<h4>Hot Jacket</h4>
+									<h5>$1390.00</h5>
+								</div>
+								
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#horizontalTab').easyResponsiveTabs({
+				type: 'default', //Types: default, vertical, accordion           
+				width: 'auto', //auto or any width like 600px
+				fit: true   // 100% fit in a container
+			});
+		});		
+	</script>
+
+	<div class="fandt">
+		<div class="container">
+			<div class="col-md-6 features">
+				<h3>Our Services</h3>
+				<div class="support">
+					<div class="col-md-2 ficon hvr-rectangle-out">
+						<i class="fa fa-lock " aria-hidden="true"></i>
+					</div>
+					<div class="col-md-10 ftext">
+						<h4>High Security</h4>
+
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="shipping">
+					<div class="col-md-2 ficon hvr-rectangle-out">
+						<i class="fa fa-bus" aria-hidden="true"></i>
+					</div>
+					<div class="col-md-10 ftext">
+						<h4>Free Shipping</h4>
+
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="money-back">
+					<div class="col-md-2 ficon hvr-rectangle-out">
+						<i class="fa fa-money" aria-hidden="true"></i>
+					</div>
+					<div class="col-md-10 ftext">
+						<h4>Cash on Delivery</h4>
+
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<!--<div class="col-md-6 features">
+				<div id="text">
+					<div class="col-md-10 ftext">
+						Shop the latest fashion online at Shoppe Mall and discover new favourites in women’s clothing. Find everything from casual
+						day dresses to sharp office wear. We have jeans in every fit, premium quality items and the latest fashion essentials.
+						Check out our Conscious collection, made out of more sustainable materials, we bring you women’s fashion in a more
+						sustainable way.
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>-->
+			<div class="col-md-6 testimonials">
+			<div class="test-inner">
+				<div class="wmuSlider example1 animated wow slideInUp" data-wow-delay=".5s">
+					<div class="wmuSliderWrapper">
+							<article style="position: absolute; width: 100%; opacity: 0;"> 		
+							<div class="banner-wrap">
+								<img src="images/new1.JPEG" alt=" " class="img-responsive" />
+
+							</div>
+							</article>
+						<article style="position: absolute; width: 100%; opacity: 0;"> 
+							<div class="banner-wrap">
+								<img src="images/new2.jpg" alt=" " class="img-responsive" />
+							</div>
+						</article>
+						<article style="position: absolute; width: 100%; opacity: 0;">
+							<div class="banner-wrap">
+								<img src="images/new3.jpg" alt=" " class="img-responsive" />
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+			<div class="clearfix"></div>
+		</div>
+
+		<script src="js/jquery.wmuSlider.js"></script>
+		<script>
+			$('.example1').wmuSlider();         
+		</script>
+
+	</div>
+	<!-- top-brands -->
+	<div class="top-brands">
+		<div class="container">
+			<h3>2018 Top Model</h3>
+			<div class="sliderfig">
+				<ul id="flexiselDemo1">
+					<li>
+						<img src="images/1.png" alt=" " class="img-responsive" />
+					</li>
+					<li>
+						<img src="images/4.png" alt=" " class="img-responsive" />
+					</li>
+					<li>
+						<img src="images/5.jpg" alt=" " class="img-responsive" />
+					</li>
+					<li>
+						<img src="images/6.jpg" alt=" " class="img-responsive" />
+					</li>
+					<li>
+						<img src="images/2.jpg" alt=" " class="img-responsive" />
+					</li>
+				</ul>
+			</div>
+			<script type="text/javascript">
+				$(window).load(function () {
+					$("#flexiselDemo1").flexisel({
+						visibleItems: 4,
+						animationSpeed: 1000,
+						autoPlay: false,
+						autoPlaySpeed: 3000,
+						pauseOnHover: true,
+						enableResponsiveBreakpoints: true,
+						responsiveBreakpoints: {
+							portrait: {
+								changePoint: 480,
+								visibleItems: 1
+							},
+							landscape: {
+								changePoint: 640,
+								visibleItems: 2
+							},
+							tablet: {
+								changePoint: 768,
+								visibleItems: 3
+							}
+						}
+					});
+
+				});
+			</script>
+			<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+		</div>
+	</div>
+	<!-- //top-brands -->
+	<!-- newsletter -->
+	<div class="newsletter">
+		<div class="container">
+			<div class="col-md-6 w3agile_newsletter_left">
+				<h3>Newsletter</h3>
+				<p>Subscribe us now, you will get a lot of informations.</p>
+			</div>
+			<div class="col-md-6 w3agile_newsletter_right">
+				<form action="#" method="post">
+					<input type="email" name="Email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}"
+					 required="">
+					<input type="submit" value="Subscribe" />
+				</form>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!-- //newsletter -->
+	<div class="footer">
+		<div class="container">
+			<div class="col-md-5 footer-grids fgd1">
+
+				<ul>
+						<li>National Tsing Hua University, </li>
+						<li>Hsinchu City. Taiwan.</li>
+					<li>
+						<a href="mailto:kevinli56789@gmail.com">kevinli56789@gmail.com</a>
+					</li>
+
+				</ul>
+			</div>
+			<div class="col-md-7 footer-grids fgd1">
+				<ul>
+					<a href="https://www.facebook.com/profile.php?id=100004371733696" target="_target">
+						<i class="fa fa-facebook" aria-hidden="true"></i>
+					</a>
+					<a href="https://www.instagram.com/seraph1125/" target="_target">
+						<i class="fa fa-instagram" aria-hidden="true"></i>
+					</a>
+				</ul>
+			</div>
+
+			<div class="clearfix"></div>
+			<p class="copy-right">Copyright &copy; 2018.Handsomelee All rights reserved.
+		</div>
+	</div>
+	<!-- cart-js -->
+	<script src="js/minicart.js"></script>
+	<script>
+		w3ls1.render();
+
+		w3ls1.cart.on('w3sb1_checkout', function (evt) {
+			var items, len, i;
+
+			if (this.subtotal() > 0) {
+				items = this.items();
+
+				for (i = 0, len = items.length; i < len; i++) {
+					items[i].set('shipping', 0);
+					items[i].set('shipping2', 0);
+				}
+			}
+		});
+	</script>
+	<!-- //cart-js -->
+</body>
+
+</html>

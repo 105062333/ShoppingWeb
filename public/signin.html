@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="Shortcut Icon" href="images/horse.ico">
+
+	<link rel="stylesheet" type="text/css" href="sign/vendor/bootstrap/css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="sign/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="sign/fonts/iconic/css/material-design-iconic-font.min.css">
+
+	<link rel="stylesheet" type="text/css" href="sign/vendor/animate/animate.css">
+
+	<link rel="stylesheet" type="text/css" href="sign/vendor/css-hamburgers/hamburgers.min.css">
+
+	<link rel="stylesheet" type="text/css" href="sign/vendor/animsition/css/animsition.min.css">
+
+	<link rel="stylesheet" type="text/css" href="sign/vendor/select2/select2.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="sign/vendor/daterangepicker/daterangepicker.css">
+
+	<link rel="stylesheet" type="text/css" href="sign/css/util.css">
+	<link rel="stylesheet" type="text/css" href="sign/css/main.css">
+
+</head>
+<body>
+	
+	
+	<div class="container-login100" style="background-image: url('sign/images/bg-03.JPG');">
+		<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+			<form class="login100-form validate-form">
+				<span class="login100-form-title p-b-37">
+					Sign In
+				</span>
+
+				<div class="wrap-input100 validate-input m-b-20" data-validate="Enter username or email">
+					<input class="input100" type="text" name="username" placeholder="username or email" id="inputEmail">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input m-b-25" data-validate = "Enter password">
+					<input class="input100" type="password" name="pass" placeholder="password" id="inputPassword">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="contact100-form-checkbox m-l-4">
+					<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+					<label class="label-checkbox100" for="ckb1">
+						Remember me
+					</label>
+				</div>
+				<br>
+				<div class="container-login100-form-btn">
+					<button class="login100-form-btn" id="btnLogin" type="button">
+						LOGIN
+					</button>
+				</div>
+
+				<div class="text-center p-t-57 p-b-20">
+					<span class="txt1">
+						Or 
+					</span><br>
+					<span class="txt1">
+						 login with
+					</span>
+				</div>
+
+				<div class="flex-c p-b-112">
+					<a href="#" class="login100-social-item" id="btnFacebook">
+						<i class="fa fa-facebook-f"></i>
+					</a>
+
+					<a href="#" class="login100-social-item" id="btngoogle">
+						<img src="sign/images/icons/icon-google.png" alt="GOOGLE">
+					</a>
+				</div>
+
+				<div class="text-center">
+					<span class="txt3">
+						Not a Member ?
+					</span>
+					<br>
+					<a href="#" class="txt4 hov1" id="btnSignUp">
+						Sign Up
+					</a>
+				</div>
+			</form>
+
+			
+		</div>
+	</div>
+	
+	
+
+	<div id="dropDownSelect1"></div>
+	
+
+	<script src="sign/vendor/jquery/jquery-3.2.1.min.js"></script>
+
+	<script src="sign/vendor/animsition/js/animsition.min.js"></script>
+
+	<script src="sign/vendor/bootstrap/js/popper.js"></script>
+	<script src="sign/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+	<script src="sign/vendor/select2/select2.min.js"></script>
+
+	<script src="sign/vendor/daterangepicker/moment.min.js"></script>
+	<script src="sign/vendor/daterangepicker/daterangepicker.js"></script>
+
+	<script src="sign/vendor/countdowntime/countdowntime.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-auth.js"></script> 
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-database.js"></script>
+	<script src="sign/js/main.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/signin.js"></script>
+	<script src="js/notify.js"></script>
+</body>
+</html>

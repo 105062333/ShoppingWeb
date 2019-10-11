@@ -1,0 +1,73 @@
+[debug] [2018-04-25T16:00:19.524Z] ----------------------------------------------------------------------
+[debug] [2018-04-25T16:00:19.526Z] Command:       D:\node.js\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-04-25T16:00:19.526Z] CLI Version:   3.18.2
+[debug] [2018-04-25T16:00:19.526Z] Platform:      win32
+[debug] [2018-04-25T16:00:19.526Z] Node Version:  v8.11.1
+[debug] [2018-04-25T16:00:19.527Z] Time:          Thu Apr 26 2018 00:00:19 GMT+0800 (台北標準時間)
+[debug] [2018-04-25T16:00:19.527Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-04-25T16:00:19.537Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-25T16:00:19.537Z] > authorizing via signed-in user
+[debug] [2018-04-25T16:00:19.539Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/midterm-project-105062333  
+  
+ Thu Apr 26 2018 00:00:19 GMT+0800 (台北標準時間)
+[debug] [2018-04-25T16:00:20.577Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-25T16:00:20.579Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/midterm-project-105062333/tokens  
+  
+ Thu Apr 26 2018 00:00:20 GMT+0800 (台北標準時間)
+[debug] [2018-04-25T16:00:21.339Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-25T16:00:21.341Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/midterm-project-105062333  
+  
+ Thu Apr 26 2018 00:00:21 GMT+0800 (台北標準時間)
+[debug] [2018-04-25T16:00:22.250Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\user\105062333.gitlab.io\Midterm_Project'...
+[info] 
+[debug] [2018-04-25T16:00:22.258Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/502813923340/clients/_:getWebAppConfig  
+  
+ Thu Apr 26 2018 00:00:22 GMT+0800 (台北標準時間)
+[debug] [2018-04-25T16:00:22.816Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-04-26T04:15:36.805Z] ----------------------------------------------------------------------
+[debug] [2018-04-26T04:15:36.808Z] Command:       D:\node.js\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-04-26T04:15:36.808Z] CLI Version:   3.18.2
+[debug] [2018-04-26T04:15:36.808Z] Platform:      win32
+[debug] [2018-04-26T04:15:36.808Z] Node Version:  v8.11.1
+[debug] [2018-04-26T04:15:36.809Z] Time:          Thu Apr 26 2018 12:15:36 GMT+0800 (台北標準時間)
+[debug] [2018-04-26T04:15:36.809Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-04-26T04:15:36.844Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-26T04:15:36.845Z] > authorizing via signed-in user
+[debug] [2018-04-26T04:15:36.847Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-04-26T04:15:36.847Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/vcMlz-RoA3FETNFqO7PHvA-Hcn2dYxELgPgRA0Le03E',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu Apr 26 2018 12:15:36 GMT+0800 (台北標準時間)
+[debug] [2018-04-26T04:15:36.964Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-26T04:15:36.986Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/midterm-project-105062333  
+  
+ Thu Apr 26 2018 12:15:36 GMT+0800 (台北標準時間)
+[debug] [2018-04-26T04:15:37.791Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-26T04:15:37.792Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/midterm-project-105062333/tokens  
+  
+ Thu Apr 26 2018 12:15:37 GMT+0800 (台北標準時間)
+[debug] [2018-04-26T04:15:38.613Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-26T04:15:38.615Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/midterm-project-105062333  
+  
+ Thu Apr 26 2018 12:15:38 GMT+0800 (台北標準時間)
+[debug] [2018-04-26T04:15:39.492Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\user\105062333.gitlab.io\Midterm_Project'...
+[info] 
+[debug] [2018-04-26T04:15:39.499Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/502813923340/clients/_:getWebAppConfig  
+  
+ Thu Apr 26 2018 12:15:39 GMT+0800 (台北標準時間)
+[debug] [2018-04-26T04:15:40.091Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
